@@ -1,3 +1,9 @@
 /pytorch/__pycache__/*
+/pytorch/datasets/__pycache__/*
+/pytorch/model_implementation/__pycache__/*
+/pytorch/metrics/__pycache__/*
 /__pycache__/*
+
+
 /huggingface/__pycache__/*
+wandb_logs/*

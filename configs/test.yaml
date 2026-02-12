@@ -1,19 +1,34 @@
-model:
-    name: resnet18
-    pretrained: true
-    num_classes: 10
+experiment:
+    name: resnet50_cifar10_test
+    analysis_type: representation_output
+    seed: 42
+    device: cuda:0
 
+
+model:
+    name: resnet50
+    pretrained: true
+    num_classes: 100
+    ckpt: '/models/AAAI_MICCAI/AAAI/experiments/cifar100/simclr_cifar100/simclr_cifar100_450.ckpt'
+
+metrics:
+    effective_rank: True
+    visualize_spectrum: True
+    knn_acuracy: True
 
 dataset:
     name: cifar10
-    batch_size: 128
+    root: '/data/'
+    batch_size: 1
     num_workers: 4
+    img_size: 32
 
 
 augmentation:
-    random_crop: true
-    random_horizontal_flip: true
-    random_rotation: 15
-    color_jitter: true
-    random_grayscale: true
-    random_erasing: true
+    resize: True
+    random_crop: false
+    random_horizontal_flip: false
+    random_rotation: false
+    color_jitter: false
+    random_grayscale: false
+    random_erasing: false
