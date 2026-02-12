@@ -1,0 +1,19 @@
+model:
+    name: resnet18
+    pretrained: true
+    num_classes: 10
+
+
+dataset:
+    name: cifar10
+    batch_size: 128
+    num_workers: 4
+
+
+augmentation:
+    random_crop: true
+    random_horizontal_flip: true
+    random_rotation: 15
+    color_jitter: true
+    random_grayscale: true
+    random_erasing: true
