@@ -1,9 +1,9 @@
 import yaml
 from parsing import get_args
-
+from pytorch import eval
 
 def main(cfg):
-    pass
+    eval.evaluate(cfg)
 
 
 if __name__ == "__main__":
